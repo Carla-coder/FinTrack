@@ -25,4 +25,8 @@ A identidade visual do projeto inclui os seguintes elementos:
 
 ## Wireframes
 
-- ![Wireframe](Img/FinTrack.png)
+![Wireframe](Img/FinTrack.png)
+
+## Matriz Swot
+
+![Matriz Swot](Img/MatrizSwot.png)
