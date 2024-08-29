@@ -1,0 +1,149 @@
+Requisitos Funcionais (RF)
+RF001 - Registro de Usuário:
+
+O sistema deve permitir que novos usuários se cadastrem, fornecendo e-mail e senha.
+RF002 - Login de Usuário:
+
+O sistema deve permitir que usuários registrados façam login com seu e-mail e senha.
+RF003 - Gerenciamento de Transações:
+
+O sistema deve permitir que o usuário adicione, edite, visualize e exclua transações financeiras.
+RF003.1 - Adicionar Transação:
+
+O sistema deve permitir que o usuário adicione uma nova transação financeira, especificando detalhes como valor, data, e descrição.
+RF003.2 - Editar Transação:
+
+O sistema deve permitir que o usuário edite uma transação existente.
+RF003.3 - Visualizar Transação:
+
+O sistema deve permitir que o usuário visualize detalhes das transações realizadas.
+RF003.4 - Excluir Transação:
+
+O sistema deve permitir que o usuário exclua uma transação existente.
+RF004 - Gerenciamento de Categorias:
+
+O sistema deve permitir que o usuário adicione, edite, visualize e exclua categorias de transações.
+RF004.1 - Adicionar Categoria:
+
+O sistema deve permitir que o usuário crie novas categorias de transações.
+RF004.2 - Editar Categoria:
+
+O sistema deve permitir que o usuário edite categorias existentes.
+RF004.3 - Visualizar Categorias:
+
+O sistema deve permitir que o usuário visualize as categorias existentes.
+RF004.4 - Excluir Categoria:
+
+O sistema deve permitir que o usuário exclua categorias de transações.
+RF005 - Gerenciamento de Orçamentos:
+
+O sistema deve permitir que o usuário crie, edite, visualize e exclua orçamentos financeiros.
+RF005.1 - Criar Orçamento:
+
+O sistema deve permitir que o usuário crie novos orçamentos, especificando limites de despesas.
+RF005.2 - Editar Orçamento:
+
+O sistema deve permitir que o usuário edite orçamentos existentes.
+RF005.3 - Visualizar Orçamento:
+
+O sistema deve permitir que o usuário visualize os orçamentos criados.
+RF005.4 - Excluir Orçamento:
+
+O sistema deve permitir que o usuário exclua orçamentos existentes.
+RF006 - Gerenciamento de Histórico Financeiro:
+
+O sistema deve permitir que o usuário visualize, baixe e exclua o histórico financeiro.
+RF006.1 - Visualizar Histórico:
+
+O sistema deve permitir que o usuário visualize o histórico completo de transações.
+RF006.2 - Baixar Histórico:
+
+O sistema deve permitir que o usuário baixe o histórico financeiro em um arquivo.
+RF006.3 - Excluir Histórico:
+
+O sistema deve permitir que o usuário exclua o histórico de transações, se necessário.
+RF007 - Armazenamento Local de Dados:
+
+O sistema deve armazenar todas as transações, categorias, orçamentos e históricos localmente.
+Requisitos Não Funcionais (RNF)
+RNF001 - Segurança:
+
+O sistema deve garantir que todas as informações de login sejam criptografadas.
+As informações sensíveis do usuário, como senhas, devem ser armazenadas de forma segura.
+RNF002 - Performance:
+
+O sistema deve carregar as páginas e dados em menos de 2 segundos na maioria das operações.
+Deve ser capaz de gerenciar até 10.000 transações sem degradação perceptível na performance.
+RNF003 - Usabilidade:
+
+A interface do usuário deve ser intuitiva e fácil de usar, facilitando a navegação e execução de tarefas.
+Deve oferecer suporte a telas de diferentes tamanhos, incluindo dispositivos móveis e tablets.
+RNF004 - Confiabilidade:
+
+O sistema deve ter disponibilidade de 99,9% do tempo.
+Os dados armazenados não devem ser perdidos ou corrompidos, mesmo em caso de falha do sistema.
+RNF005 - Compatibilidade:
+
+O sistema deve ser compatível com as versões mais recentes dos navegadores populares (Chrome, Firefox, Safari).
+Deve ser compatível com as versões mais recentes dos sistemas operacionais iOS e Android.
+RNF006 - Manutenibilidade:
+
+O código do sistema deve ser modular e documentado, facilitando a manutenção e futuras atualizações.
+RNF007 - Backup e Recuperação:
+
+O sistema deve realizar backups regulares dos dados armazenados localmente.
+Deve haver um mecanismo para restaurar dados em caso de falha.
+RNF008 - Portabilidade:
+
+O sistema deve ser portável entre diferentes plataformas, como Android e iOS, sem grandes modificações no código.
+Esses requisitos abrangem tanto as funcionalidades esperadas do sistema quanto as características de qualidade que o sistema deve possuir.
+
+As regras de negócio são diretrizes ou restrições que governam as operações do sistema e a interação dos usuários com ele. No contexto do sistema de gestão financeira Fintrack, as regras de negócio podem incluir:
+
+Regras de Negócio (RN)
+RN001 - Autenticação Obrigatória:
+
+Todos os usuários devem estar autenticados no sistema para acessar qualquer funcionalidade, exceto o cadastro de novos usuários.
+RN002 - Unicidade de Usuário:
+
+Cada usuário deve ser identificado por um e-mail único. Não é permitido registrar múltiplos usuários com o mesmo e-mail.
+RN003 - Limite de Transações:
+
+Um usuário pode adicionar um número ilimitado de transações, mas o sistema deve alertar o usuário caso o número de transações ultrapasse um limite predefinido (ex. 10.000 transações).
+RN004 - Categorias Personalizadas:
+
+Os usuários podem criar suas próprias categorias de transações. No entanto, o sistema deve fornecer um conjunto padrão de categorias que não podem ser excluídas, mas podem ser editadas.
+RN005 - Orçamento por Categoria:
+
+Um orçamento deve ser associado a uma ou mais categorias. O sistema não permite a criação de um orçamento sem categorias associadas.
+RN006 - Validação de Transações:
+
+Toda transação deve ter uma data, valor, e categoria válidos antes de ser salva no sistema. Se algum desses dados estiver faltando ou for inválido, o sistema não permitirá o salvamento.
+RN007 - Limite de Orçamento:
+
+Se o total das transações em uma categoria exceder o limite estabelecido no orçamento, o sistema deve alertar o usuário. No entanto, isso não impede a adição de novas transações.
+RN008 - Histórico Imutável:
+
+Uma vez que o histórico financeiro seja baixado, ele deve ser considerado uma cópia imutável dos dados no momento da exportação. O usuário pode excluir ou visualizar o histórico, mas não pode alterá-lo diretamente.
+RN009 - Exclusão de Dados:
+
+A exclusão de transações, categorias ou orçamentos é definitiva e não pode ser desfeita. O sistema deve solicitar confirmação do usuário antes de proceder com a exclusão.
+RN010 - Backup Automático:
+
+O sistema deve realizar backups automáticos dos dados a cada 24 horas. Em caso de falha no sistema, o último backup será restaurado.
+RN011 - Segurança de Dados:
+
+As senhas dos usuários devem ser armazenadas de forma criptografada e não podem ser recuperadas, apenas resetadas.
+RN012 - Restrições de Edição de Orçamentos:
+
+Um orçamento não pode ser editado se estiver associado a transações existentes que ultrapassem o limite estabelecido.
+RN013 - Acessibilidade:
+
+O sistema deve ser acessível para usuários com necessidades especiais, garantindo conformidade com as normas de acessibilidade (ex.: WCAG 2.0).
+RN014 - Expiração de Sessão:
+
+A sessão de um usuário expira após um período de inatividade de 30 minutos. O usuário deve fazer login novamente para continuar utilizando o sistema.
+RN015 - Limite de Acesso Simultâneo:
+
+Um usuário não pode estar logado em mais de três dispositivos simultaneamente. Se o limite for excedido, o sistema deve solicitar que o usuário desconecte um dos dispositivos.
+Essas regras de negócio garantem que o sistema opere de forma consistente com os objetivos do negócio e atenda aos requisitos dos usuários de maneira segura e eficaz.
